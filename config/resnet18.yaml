@@ -1,0 +1,31 @@
+# ResNet18 baseline configuration
+
+model:
+  name: resnet18
+  pretrained: true
+  num_classes: 6
+
+data:
+  image_size: 224
+  batch_size: 32
+  num_workers: 0
+
+training:
+  epochs: 30
+  learning_rate: 0.0001
+  weight_decay: 0.0001
+  optimizer: adamw
+  seed: 9
+
+  early_stopping:
+    monitor: val_macro_f1
+    patience: 5
+    mode: max
+
+tracking:
+  enabled: true
+  project: FetalVision
+  run_name: resnet18_baseline
+
+output:
+  dir: outputs/resnet18
