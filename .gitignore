@@ -1,6 +1,16 @@
 FetalVision_ROADMAP.md
 Guide de référence fiabilité et analyse d'erreurs (FetalVision).md
 North_Star_README.md
-data/raw/
+
+/data/raw/*
+!/data/raw/images/
+
+/data/raw/images/*
+!/data/raw/images/.gitkeep
+
+/data/splits/*
+!/data/splits/*.gitkeep
+
 assets/
 notebooks/archives/
+src/fetalvision/__pycache__
