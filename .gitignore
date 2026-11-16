@@ -1,6 +1,11 @@
-FetalVision_ROADMAP.md
-Guide de référence fiabilité et analyse d'erreurs (FetalVision).md
-North_Star_README.md
+
+# Internal documentation
+/FetalVision_ROADMAP.md
+/Guide de référence fiabilité et analyse d'erreurs (FetalVision).md
+/North_Star_README.md
+
+
+# Raw dataset (keep directory structure only)
 
 /data/raw/*
 !/data/raw/images/
@@ -8,9 +13,48 @@ North_Star_README.md
 /data/raw/images/*
 !/data/raw/images/.gitkeep
 
-/data/splits/*
-!/data/splits/*.gitkeep
+# Train/validation/test splits are version-controlled.
+# /data/splits/ is intentionally NOT ignored.
 
-assets/
-notebooks/archives/
-src/fetalvision/__pycache__
+
+# Generated experiment artifacts
+
+/outputs/*
+!/outputs/.gitkeep
+
+# Weights & Biases local files
+/wandb/
+
+# Model checkpoints and weights
+*.pt
+*.pth
+*.ckpt
+
+# Python packages and caches
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+
+# Notebooks
+.ipynb_checkpoints/
+/notebooks/archives/
+
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+
+# Environment variables and secrets
+.env
+
+# Operating system files
+.DS_Store
+Thumbs.db
